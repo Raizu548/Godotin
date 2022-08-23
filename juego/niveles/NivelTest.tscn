@@ -5,7 +5,7 @@
 [ext_resource path="res://juego/bloques/ColumnaBloques.tscn" type="PackedScene" id=3]
 [ext_resource path="res://juego/bloques/MuroLargo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/bloques/BloqueLargo.tscn" type="PackedScene" id=5]
-[ext_resource path="res://juego/player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://juego/player/Godotin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://juego/bloques/MedioBloque.tscn" type="PackedScene" id=7]
 [ext_resource path="res://juego/bloques/BloquePendiente.tscn" type="PackedScene" id=8]
 
@@ -19,9 +19,6 @@ material = SubResource( 1 )
 extents = Vector3( 1, 0.001, 1 )
 
 [node name="NivelTest" type="Node"]
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.907638, 0.419753, 0, -0.419753, 0.907638, 0, 2.43433, 5.22707 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.816168, -0.0606786, -0.57462, 0.577815, 0.085709, 0.811655, 0, -0.994471, 0.105014, 0, 27.7113, 0 )
@@ -157,19 +154,18 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -100.01
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -99.01, 0, -7.62939e-06 )
 
 [node name="BloqueLargo" parent="Plataformas" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93577, 0, 4 )
 
 [node name="BloqueCesped" parent="Plataformas" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.95937 )
 
 [node name="BloquePendiente" parent="Plataformas" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2.5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93577, 0, 2.5 )
 
 [node name="MedioBloque" parent="Plataformas" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 5.5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93577, 0, 5.5 )
 
 [node name="Caja" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10811, 1.6524, 3.96051 )
 
-[node name="Player" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.68038, 0, 0 )
+[node name="Godotin" parent="." instance=ExtResource( 6 )]
