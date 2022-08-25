@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://juego/Estructuras/MiniLaberinto.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/props/Caja.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://juego/player/Godotin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://juego/bloques/MedioBloque.tscn" type="PackedScene" id=7]
 [ext_resource path="res://juego/bloques/BloquePendiente.tscn" type="PackedScene" id=8]
+[ext_resource path="res://juego/items/MonedaOro.tscn" type="PackedScene" id=9]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.0823529, 0.254902, 0.239216, 1 )
@@ -169,3 +170,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10811, 1.6524, 3.96051 )
 
 [node name="Godotin" parent="." instance=ExtResource( 6 )]
+
+[node name="Monedas" type="Spatial" parent="."]
+
+[node name="MonedaOro" parent="Monedas" instance=ExtResource( 9 )]

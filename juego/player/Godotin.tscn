@@ -1654,7 +1654,7 @@ nodes/TransicionSueloAire/position = Vector2( -20, 140 )
 nodes/VelCorrer/node = SubResource( 27 )
 nodes/VelCorrer/position = Vector2( -540, 120 )
 nodes/output/position = Vector2( 600, 180 )
-node_connections = [ "output", 0, "MezclaDisparar", "VelCorrer", 0, "Animation 2", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCorrer", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4" ]
+node_connections = [ "output", 0, "MezclaDisparar", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCorrer", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "VelCorrer", 0, "Animation 2", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5" ]
 
 [node name="Godotin" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
@@ -1853,5 +1853,5 @@ current = true
 transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -0.431902, 1.27769, 0.573244 )
 light_color = Color( 0.945098, 1, 0, 1 )
 light_energy = 0.0
-spot_range = 7.0
-spot_angle = 15.0
+spot_range = 10.0
+spot_angle = 25.0
