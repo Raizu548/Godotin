@@ -3,6 +3,7 @@ extends Control
 var nivel_actual = ""
 
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	nivel_actual = DatosPlayer.get_nivel_actual()
 
 
