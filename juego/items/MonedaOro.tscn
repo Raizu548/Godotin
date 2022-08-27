@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://recursos/modelos/monedas/gold.material" type="Material" id=1]
 [ext_resource path="res://recursos/modelos/monedas/wood.material" type="Material" id=2]
@@ -33,21 +33,6 @@ surfaces/1 = {
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 120
-}
-
-[sub_resource type="Animation" id=5]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0.37253, 0 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -124,8 +109,8 @@ tracks/0/keys = {
 }
 
 [node name="MonedaOro" type="Area"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.37253, 0 )
-collision_layer = 0
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37253, 0 )
+collision_layer = 16
 script = ExtResource( 3 )
 
 [node name="Colisionador" type="CollisionShape" parent="."]
@@ -140,7 +125,6 @@ material/1 = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "activa"
-anims/RESET = SubResource( 5 )
 anims/activa = SubResource( 3 )
 anims/consumida = SubResource( 6 )
 anims/default = SubResource( 4 )

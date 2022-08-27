@@ -36,6 +36,11 @@ config/name="Godotin"
 run/main_scene="res://juego/niveles/NivelTest.tscn"
 config/icon="res://godotin_icon.jpg"
 
+[autoload]
+
+DatosPlayer="*res://juego/autoloads/DatosPlayer.gd"
+Evento="*res://juego/autoloads/Evento.gd"
+
 [display]
 
 window/size/width=960
@@ -83,6 +88,8 @@ disparar={
 3d_physics/layer_1="Player"
 3d_physics/layer_2="Plataformas"
 3d_physics/layer_3="Mundo"
+3d_physics/layer_4="danio"
+3d_physics/layer_5="moneda"
 
 [physics]
 

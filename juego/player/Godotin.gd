@@ -26,6 +26,7 @@ var salto_interrumpido: bool = false
 var saltando: bool = false
 var cayendo: bool = false
 var disparando: bool = false
+var posInicial: Vector3
 
 ## Metodos
 func _process(delta: float) -> void:
@@ -101,3 +102,6 @@ func tomar_direccion() -> Vector3:
 	direccion = direccion.rotated(Vector3.UP, brazo_camara.rotation.y).normalized()
 	
 	return direccion
+
+func respawn() -> void:
+	DatosPlayer.restar_vida()

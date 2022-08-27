@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://recursos/Items/bronze_1.png" type="Texture" id=1]
+[ext_resource path="res://recursos/Fonts/Kenney Future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://juego/interfaz/PuntuacionMonedaBase.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 27
+font_data = ExtResource( 2 )
+
+[node name="NinePatchRect" type="NinePatchRect"]
+margin_right = 119.0
+margin_bottom = 81.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 58.5787
+margin_top = 11.4183
+margin_right = 276.579
+margin_bottom = 42.4183
+custom_fonts/font = SubResource( 1 )
+text = "x 10 = valor"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="MarginContainer"]
+position = Vector2( 28.2576, 26.5298 )
+scale = Vector2( 0.659637, 0.629605 )
+texture = ExtResource( 1 )
