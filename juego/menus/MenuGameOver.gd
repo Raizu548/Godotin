@@ -4,7 +4,7 @@ var nivel_actual = ""
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	nivel_actual = DatosPlayer.get_nivel_actual()
+	nivel_actual = DatosJuego.get_nivel_actual()
 
 
 func _on_BotonSalir_pressed() -> void:
@@ -12,5 +12,5 @@ func _on_BotonSalir_pressed() -> void:
 
 
 func _on_BotonReintentar_pressed() -> void:
-	DatosPlayer.reset()
+	DatosJuego.reset()
 	get_tree().change_scene(nivel_actual)

@@ -11,5 +11,5 @@ func _ready():
 
 
 func actualizar_hud():
-	etiqueta_vidas.text = "%s" % DatosPlayer.get_vida()
-	etiqueta_monedas_oro.text = "%s" % DatosPlayer.get_moneda_oro()
+	etiqueta_vidas.text = "%s" % DatosJuego.get_vida()
+	etiqueta_monedas_oro.text = "%s" % DatosJuego.get_moneda_oro()

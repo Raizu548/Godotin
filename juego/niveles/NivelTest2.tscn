@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://juego/Estructuras/MiniLaberinto.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/props/Caja.tscn" type="PackedScene" id=2]
@@ -12,10 +12,9 @@
 [ext_resource path="res://juego/objetos/danio/Sierra.tscn" type="PackedScene" id=10]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
-[ext_resource path="res://juego/Estructuras/Portal/Portal.tscn" type="PackedScene" id=13]
 
 [sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.0823529, 0.254902, 0.239216, 1 )
+albedo_color = Color( 0.254902, 0.176471, 0.0823529, 1 )
 
 [sub_resource type="PlaneMesh" id=2]
 material = SubResource( 1 )
@@ -27,8 +26,6 @@ extents = Vector3( 1, 0.001, 1 )
 script = ExtResource( 12 )
 nivel_actual = "res://juego/niveles/NivelTest.tscn"
 menu_game_over = "res://juego/menus/MenuGameOver.tscn"
-numero_nivel = 1
-proximo_nivel = "res://juego/niveles/NivelTest2.tscn"
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.816168, -0.0606786, -0.57462, 0.577815, 0.085709, 0.811655, 0, -0.994471, 0.105014, 0, 27.7113, 0 )
@@ -37,7 +34,6 @@ light_energy = 1.94
 shadow_enabled = true
 
 [node name="Suelo" type="StaticBody" parent="."]
-collision_layer = 2
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -201,6 +197,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1647, 1.23358, -1.74047 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1647, 1.23358, -3.59741 )
 
 [node name="HUD" parent="." instance=ExtResource( 11 )]
-
-[node name="Portal" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 8.22182, 0, 0 )

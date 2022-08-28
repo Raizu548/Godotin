@@ -1,10 +1,12 @@
 extends Node
 
 ## Atributos
-var vida = 3
-var moneda_oro = 0
-var nivel_actual = ""
-var puntaje = 0
+var vida: int = 3
+var moneda_oro: int = 0
+var nivel_actual: String = ""
+var num_nivel_actual: int = 0
+var nivel_proximo: String = ""
+var puntaje: int = 0
 
 ## Getter and setter
 func get_vida() -> int:

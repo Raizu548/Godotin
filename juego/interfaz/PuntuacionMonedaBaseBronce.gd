@@ -2,4 +2,4 @@ extends "res://juego/interfaz/PuntuacionMonedaBase.gd"
 
 
 func mostrar_puntuacion():
-	return "%s " % DatosPlayer.get_moneda_bronce() + "x %s" % DatosPlayer.get_punto_bronce() +  " = %s" % DatosPlayer.puntaje_tot_bronce()
+	return "%s " % DatosJuego.get_moneda_bronce() + "x %s" % DatosJuego.get_punto_bronce() +  " = %s" % DatosJuego.puntaje_tot_bronce()

@@ -12,7 +12,7 @@ dest_files=[ "res://.import/doorOpen.glb-22dc30d7a31ca8a4732284ad1da9a930.scn" ]
 [params]
 
 nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_name="Portal"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

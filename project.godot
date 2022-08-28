@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "Moneda",
 "language": "GDScript",
 "path": "res://juego/items/MonedaOro.gd"
+}, {
+"base": "Area",
+"class": "PortalNivel",
+"language": "GDScript",
+"path": "res://juego/Estructuras/Portal/Portal.gd"
 } ]
 _global_script_class_icons={
 "ArbolAnimacionPlayer": "",
 "Godotin": "",
-"Moneda": ""
+"Moneda": "",
+"PortalNivel": ""
 }
 
 [application]
@@ -38,8 +44,8 @@ config/icon="res://godotin_icon.jpg"
 
 [autoload]
 
-DatosPlayer="*res://juego/autoloads/DatosPlayer.gd"
 Evento="*res://juego/autoloads/Evento.gd"
+DatosJuego="*res://juego/autoloads/DatosJuego.gd"
 
 [display]
 
@@ -90,6 +96,7 @@ disparar={
 3d_physics/layer_3="Mundo"
 3d_physics/layer_4="danio"
 3d_physics/layer_5="moneda"
+3d_physics/layer_6="portal"
 
 [physics]
 

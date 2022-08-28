@@ -104,4 +104,4 @@ func tomar_direccion() -> Vector3:
 	return direccion
 
 func respawn() -> void:
-	DatosPlayer.restar_vida()
+	DatosJuego.restar_vida()
