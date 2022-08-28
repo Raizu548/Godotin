@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://recursos/Items/silver_1.png" type="Texture" id=1]
+[ext_resource path="res://juego/interfaz/PuntuacionMonedaBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/interfaz/PuntuacionMonedaPlata.gd" type="Script" id=3]
+
+[node name="PuntuacionMonedaPlata" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="MarginContainer" index="0"]
+texture = ExtResource( 1 )

@@ -1,0 +1,206 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://juego/Estructuras/MiniLaberinto.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/props/Caja.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/bloques/ColumnaBloques.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/bloques/MuroLargo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/bloques/BloqueLargo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/player/Godotin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://juego/bloques/MedioBloque.tscn" type="PackedScene" id=7]
+[ext_resource path="res://juego/bloques/BloquePendiente.tscn" type="PackedScene" id=8]
+[ext_resource path="res://juego/items/MonedaOro.tscn" type="PackedScene" id=9]
+[ext_resource path="res://juego/objetos/danio/Sierra.tscn" type="PackedScene" id=10]
+[ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
+[ext_resource path="res://juego/Estructuras/Portal/Portal.tscn" type="PackedScene" id=13]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.0823529, 0.254902, 0.239216, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1, 0.001, 1 )
+
+[node name="NivelTest" type="Node"]
+script = ExtResource( 12 )
+nivel_actual = "res://juego/niveles/NivelTest.tscn"
+menu_game_over = "res://juego/menus/MenuGameOver.tscn"
+numero_nivel = 1
+proximo_nivel = "res://juego/niveles/NivelTest2.tscn"
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.816168, -0.0606786, -0.57462, 0.577815, 0.085709, 0.811655, 0, -0.994471, 0.105014, 0, 27.7113, 0 )
+light_color = Color( 0.901961, 0.972549, 0.0588235, 1 )
+light_energy = 1.94
+shadow_enabled = true
+
+[node name="Suelo" type="StaticBody" parent="."]
+collision_layer = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Suelo"]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Suelo"]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="Plataformas" type="Spatial" parent="."]
+
+[node name="Columnas" type="Spatial" parent="Plataformas"]
+
+[node name="Norte" type="Spatial" parent="Plataformas/Columnas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100 )
+
+[node name="MuroLargo" parent="Plataformas/Columnas/Norte" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 0 )
+
+[node name="MuroLargo2" parent="Plataformas/Columnas/Norte" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0 )
+
+[node name="MuroLargo3" parent="Plataformas/Columnas/Norte" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0 )
+
+[node name="MuroLargo4" parent="Plataformas/Columnas/Norte" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73, 0, 0 )
+
+[node name="ColumnaBloques" parent="Plataformas/Columnas/Norte" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 0 )
+
+[node name="ColumnaBloques2" parent="Plataformas/Columnas/Norte" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -99, 0, 0 )
+
+[node name="ColumnaBloques3" parent="Plataformas/Columnas/Norte" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98, 0, 0 )
+
+[node name="ColumnaBloques4" parent="Plataformas/Columnas/Norte" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 0 )
+
+[node name="ColumnaBloques5" parent="Plataformas/Columnas/Norte" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 0, 0.01 )
+
+[node name="Sur" type="Spatial" parent="Plataformas/Columnas"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100 )
+
+[node name="MuroLargo" parent="Plataformas/Columnas/Sur" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 0 )
+
+[node name="MuroLargo2" parent="Plataformas/Columnas/Sur" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0 )
+
+[node name="MuroLargo3" parent="Plataformas/Columnas/Sur" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0 )
+
+[node name="MuroLargo4" parent="Plataformas/Columnas/Sur" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73, 0, 0 )
+
+[node name="ColumnaBloques" parent="Plataformas/Columnas/Sur" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98, 0, 0 )
+
+[node name="ColumnaBloques2" parent="Plataformas/Columnas/Sur" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 0 )
+
+[node name="ColumnaBloques3" parent="Plataformas/Columnas/Sur" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 0 )
+
+[node name="ColumnaBloques4" parent="Plataformas/Columnas/Sur" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -99, 0, 0 )
+
+[node name="Este" type="Spatial" parent="Plataformas/Columnas"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -100, 0, 4.37114e-06 )
+
+[node name="MuroLargo" parent="Plataformas/Columnas/Este" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 0 )
+
+[node name="MuroLargo2" parent="Plataformas/Columnas/Este" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0 )
+
+[node name="MuroLargo3" parent="Plataformas/Columnas/Este" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0 )
+
+[node name="MuroLargo4" parent="Plataformas/Columnas/Este" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73, 0, 0 )
+
+[node name="ColumnaBloques" parent="Plataformas/Columnas/Este" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -99, 0, 0 )
+
+[node name="ColumnaBloques2" parent="Plataformas/Columnas/Este" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98, 0, 7.62939e-06 )
+
+[node name="ColumnaBloques3" parent="Plataformas/Columnas/Este" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0, 7.62939e-06 )
+
+[node name="Oeste" type="Spatial" parent="Plataformas/Columnas"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 100, 0, -4.37114e-06 )
+
+[node name="MuroLargo" parent="Plataformas/Columnas/Oeste" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74, 0, 0 )
+
+[node name="MuroLargo2" parent="Plataformas/Columnas/Oeste" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0 )
+
+[node name="MuroLargo3" parent="Plataformas/Columnas/Oeste" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0 )
+
+[node name="MuroLargo4" parent="Plataformas/Columnas/Oeste" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73, 0, 0 )
+
+[node name="ColumnaBloques" parent="Plataformas/Columnas/Oeste" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 97.99, 0, 7.62939e-06 )
+
+[node name="ColumnaBloques2" parent="Plataformas/Columnas/Oeste" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 98.99, 0, 7.62939e-06 )
+
+[node name="ColumnaBloques3" parent="Plataformas/Columnas/Oeste" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -100.01, 0, -7.62939e-06 )
+
+[node name="ColumnaBloques4" parent="Plataformas/Columnas/Oeste" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -99.01, 0, -7.62939e-06 )
+
+[node name="BloqueLargo" parent="Plataformas" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93577, 0, 4 )
+
+[node name="BloquePendiente" parent="Plataformas" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93577, 0, 2.5 )
+
+[node name="MedioBloque" parent="Plataformas" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93577, 0, 5.5 )
+
+[node name="MiniLaberinto" parent="Plataformas" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27 )
+
+[node name="Caja" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10811, 1.6524, 3.96051 )
+
+[node name="Godotin" parent="." instance=ExtResource( 6 )]
+
+[node name="Monedas" type="Spatial" parent="."]
+
+[node name="MonedaOro" parent="Monedas" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.759837, 4.72648 )
+
+[node name="MonedaOro2" parent="Monedas" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.759837, 6.39687 )
+
+[node name="Sierras" type="Spatial" parent="."]
+
+[node name="Sierra" parent="Sierras" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1647, 1.23358, 0 )
+
+[node name="Sierra2" parent="Sierras" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1647, 1.23358, -1.74047 )
+
+[node name="Sierra3" parent="Sierras" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1647, 1.23358, -3.59741 )
+
+[node name="HUD" parent="." instance=ExtResource( 11 )]
+
+[node name="Portal" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 8.22182, 0, 0 )

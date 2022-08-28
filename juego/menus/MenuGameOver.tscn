@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://recursos/Fonts/Kenney Future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://juego/menus/MenuGameOver.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="MenuGameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.380392, 0.376471, 0.886275, 1 )
+
+[node name="LabelGameOver" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -251.0
+margin_top = -215.0
+margin_right = 251.0
+margin_bottom = -135.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Game Over"
+
+[node name="LabelPuntaje" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -229.0
+margin_top = -68.0
+margin_right = 51.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 2 )
+text = "Puntaje: "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 301.0
+margin_top = 360.0
+margin_right = -372.0
+margin_bottom = -229.0
+custom_constants/separation = 25
+alignment = 1
+
+[node name="BotonSalir" type="Button" parent="HBoxContainer"]
+margin_left = 58.0
+margin_right = 97.0
+margin_bottom = 51.0
+text = "Salir"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+margin_left = 122.0
+margin_right = 126.0
+margin_bottom = 51.0
+
+[node name="BotonReintentar" type="Button" parent="HBoxContainer"]
+margin_left = 151.0
+margin_right = 229.0
+margin_bottom = 51.0
+text = "Reintentar"
+
+[connection signal="pressed" from="HBoxContainer/BotonSalir" to="." method="_on_BotonSalir_pressed"]
+[connection signal="pressed" from="HBoxContainer/BotonReintentar" to="." method="_on_BotonReintentar_pressed"]
