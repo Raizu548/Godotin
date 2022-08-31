@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/POL-lone-wolf-short.wav-f7ea3a5236f679a78f0a21fb7e4ef892.sample"
+
+[deps]
+
+source_file="res://juego/menus/POL-lone-wolf-short.wav"
+dest_files=[ "res://.import/POL-lone-wolf-short.wav-f7ea3a5236f679a78f0a21fb7e4ef892.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

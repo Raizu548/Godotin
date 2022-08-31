@@ -1,0 +1,466 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://recursos/Fonts/Kenney Future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://recursos/Fonts/Revamped.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://juego/menus/MenuAjustes.gd" type="Script" id=3]
+[ext_resource path="res://juego/menus/presionar_boton.wav" type="AudioStream" id=4]
+[ext_resource path="res://juego/menus/CambiarVolumen.gd" type="Script" id=5]
+[ext_resource path="res://juego/menus/POL-lone-wolf-short.wav" type="AudioStream" id=6]
+[ext_resource path="res://recursos/Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://juego/menus/Botones/ContenedorAccion.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://recursos/Fonts/Kenney Future Narrow.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 25
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 22
+font_data = ExtResource( 7 )
+
+[node name="MenuAjustes" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 739.0 ],
+"_edit_vertical_guides_": [ 480.0 ]
+}
+menu_inicial = "res://juego/menus/MenuInicio.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="BotonMenuPrincipal" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -135.0
+margin_top = -84.0
+margin_right = 135.0
+margin_bottom = -27.0
+custom_fonts/font = SubResource( 11 )
+text = "Menu Principal"
+
+[node name="BotonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.0
+bus = "SFX"
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+bus = "Musica"
+
+[node name="ContenedorTabulador" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -103.0
+custom_fonts/font = SubResource( 12 )
+tab_align = 0
+
+[node name="AudioVideo" type="Tabs" parent="ContenedorTabulador"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 40.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Titulo" type="Label" parent="ContenedorTabulador/AudioVideo"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -99.5
+margin_top = 3.0
+margin_right = 99.5
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 1 )
+text = "Ajustes"
+
+[node name="PanelPrincipal" type="Panel" parent="ContenedorTabulador/AudioVideo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -374.0
+margin_top = -188.0
+margin_right = 374.0
+margin_bottom = 188.0
+
+[node name="ContenedorPrincipal" type="VBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 144.0
+margin_top = 27.0
+margin_right = -144.0
+margin_bottom = -28.0
+
+[node name="Pantalla" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_right = 460.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 2 )
+text = "Pantalla"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 37.0
+margin_right = 460.0
+margin_bottom = 41.0
+
+[node name="Resolucion" type="HBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 45.0
+margin_right = 460.0
+margin_bottom = 73.0
+alignment = 1
+
+[node name="TextoResolucion" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/Resolucion"]
+margin_left = 67.0
+margin_top = 3.0
+margin_right = 213.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 3 )
+text = "Resolicion"
+align = 1
+
+[node name="OpcionResolucion" type="OptionButton" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/Resolucion"]
+margin_left = 217.0
+margin_right = 393.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 4 )
+text = "1920 x 1080"
+
+[node name="PantallaCompleta" type="CheckBox" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 77.0
+margin_right = 460.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 5 )
+text = "Pantalla Completa"
+align = 1
+
+[node name="HSeparator2" type="HSeparator" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 111.0
+margin_right = 460.0
+margin_bottom = 115.0
+
+[node name="HSeparator3" type="HSeparator" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 119.0
+margin_right = 460.0
+margin_bottom = 123.0
+
+[node name="Volumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 127.0
+margin_right = 460.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 6 )
+text = "Volumen"
+align = 1
+
+[node name="HSeparator4" type="HSeparator" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 164.0
+margin_right = 460.0
+margin_bottom = 168.0
+
+[node name="VolumenGeneral" type="HBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 172.0
+margin_right = 460.0
+margin_bottom = 200.0
+alignment = 1
+
+[node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenGeneral"]
+margin_left = 129.0
+margin_top = 3.0
+margin_right = 249.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 7 )
+text = "General "
+align = 1
+
+[node name="BajarVolumen" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenGeneral"]
+margin_left = 253.0
+margin_right = 275.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 8 )
+text = "-"
+flat = true
+script = ExtResource( 5 )
+nodo_sfx = NodePath("../../../../../../BotonSFX")
+
+[node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenGeneral"]
+margin_left = 279.0
+margin_top = 3.0
+margin_right = 305.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 9 )
+text = "10"
+
+[node name="SubirVolumen" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenGeneral"]
+margin_left = 309.0
+margin_right = 331.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 8 )
+text = "+"
+flat = true
+script = ExtResource( 5 )
+nodo_sfx = NodePath("../../../../../../BotonSFX")
+
+[node name="VolumenMusica" type="HBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 204.0
+margin_right = 460.0
+margin_bottom = 232.0
+alignment = 1
+
+[node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenMusica"]
+margin_left = 128.0
+margin_top = 3.0
+margin_right = 250.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 7 )
+text = "Musica      "
+
+[node name="BajarVolumen" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenMusica"]
+margin_left = 254.0
+margin_right = 276.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 8 )
+text = "-"
+flat = true
+script = ExtResource( 5 )
+nodo_sfx = NodePath("../../../../../../BotonSFX")
+
+[node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenMusica"]
+margin_left = 280.0
+margin_top = 3.0
+margin_right = 306.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 9 )
+text = "10"
+
+[node name="SubirVolumen" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenMusica"]
+margin_left = 310.0
+margin_right = 332.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 8 )
+text = "+"
+flat = true
+script = ExtResource( 5 )
+nodo_sfx = NodePath("../../../../../../BotonSFX")
+
+[node name="VolumenSFX" type="HBoxContainer" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal"]
+margin_top = 236.0
+margin_right = 460.0
+margin_bottom = 264.0
+alignment = 1
+
+[node name="TextoVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenSFX"]
+margin_left = 129.0
+margin_top = 3.0
+margin_right = 249.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 7 )
+text = "SFX              "
+
+[node name="BajarVolumen" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenSFX"]
+margin_left = 253.0
+margin_right = 275.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 8 )
+text = "-"
+flat = true
+script = ExtResource( 5 )
+nodo_sfx = NodePath("../../../../../../BotonSFX")
+
+[node name="NivelVolumen" type="Label" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenSFX"]
+margin_left = 279.0
+margin_top = 3.0
+margin_right = 305.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 9 )
+text = "10"
+
+[node name="SubirVolumen" type="Button" parent="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenSFX"]
+margin_left = 309.0
+margin_right = 331.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 8 )
+text = "+"
+flat = true
+script = ExtResource( 5 )
+nodo_sfx = NodePath("../../../../../../BotonSFX")
+
+[node name="Inputs" type="Tabs" parent="ContenedorTabulador"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 40.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Label" type="Label" parent="ContenedorTabulador/Inputs"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -249.0
+margin_top = 11.0
+margin_right = 249.0
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 13 )
+text = "Clic en el boton para asignar tecla"
+align = 1
+
+[node name="ContenedorRampeo" type="VBoxContainer" parent="ContenedorTabulador/Inputs"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -154.0
+margin_top = -134.5
+margin_right = 155.0
+margin_bottom = 26.5
+
+[node name="ContenedorAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo" instance=ExtResource( 8 )]
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion" index="2"]
+text = ""
+accion = "mov_adelante"
+
+[node name="ContenedorAccion2" parent="ContenedorTabulador/Inputs/ContenedorRampeo" instance=ExtResource( 8 )]
+margin_top = 40.0
+margin_bottom = 76.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion2" index="0"]
+margin_right = 87.0
+text = "Atras"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion2" index="1"]
+margin_left = 91.0
+margin_right = 121.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion2" index="2"]
+margin_left = 125.0
+accion = "mov_atras"
+
+[node name="ContenedorAccion3" parent="ContenedorTabulador/Inputs/ContenedorRampeo" instance=ExtResource( 8 )]
+margin_top = 80.0
+margin_bottom = 116.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion3" index="0"]
+margin_right = 143.0
+text = "izquierda"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion3" index="1"]
+margin_left = 147.0
+margin_right = 177.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion3" index="2"]
+margin_left = 181.0
+accion = "mov_izquierda"
+
+[node name="ContenedorAccion4" parent="ContenedorTabulador/Inputs/ContenedorRampeo" instance=ExtResource( 8 )]
+margin_top = 120.0
+margin_bottom = 156.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion4" index="0"]
+margin_right = 130.0
+text = "derecha"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion4" index="1"]
+margin_left = 134.0
+margin_right = 164.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion4" index="2"]
+margin_left = 168.0
+accion = "mov_derecha"
+
+[node name="ContenedorAccion5" parent="ContenedorTabulador/Inputs/ContenedorRampeo" instance=ExtResource( 8 )]
+margin_top = 160.0
+margin_bottom = 196.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion5" index="0"]
+margin_right = 99.0
+text = "Saltar"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion5" index="1"]
+margin_left = 103.0
+margin_right = 133.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion5" index="2"]
+margin_left = 137.0
+accion = "saltar"
+
+[node name="ContenedorAccion6" parent="ContenedorTabulador/Inputs/ContenedorRampeo" instance=ExtResource( 8 )]
+margin_top = 200.0
+margin_bottom = 236.0
+
+[node name="NombreAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion6" index="0"]
+margin_right = 135.0
+text = "Disparar"
+
+[node name="VSeparator" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion6" index="1"]
+margin_left = 139.0
+margin_right = 169.0
+
+[node name="InputAccion" parent="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion6" index="2"]
+margin_left = 173.0
+accion = "disparar"
+
+[connection signal="pressed" from="BotonMenuPrincipal" to="." method="_on_BotonMenuPrincipal_pressed"]
+[connection signal="item_selected" from="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/Resolucion/OpcionResolucion" to="." method="_on_OpcionResolucion_item_selected"]
+[connection signal="toggled" from="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/PantallaCompleta" to="." method="_on_PantallaCompleta_toggled"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenGeneral/BajarVolumen" to="." method="_on_BajarVolumenGeneral_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenGeneral/SubirVolumen" to="." method="_on_SubirVolumenGeneral_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenMusica/BajarVolumen" to="." method="_on_BajarVolumenMusica_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenMusica/SubirVolumen" to="." method="_on_SubirVolumenMusica_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenSFX/BajarVolumen" to="." method="_on_BajarVolumenSFX_pressed"]
+[connection signal="pressed" from="ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenSFX/SubirVolumen" to="." method="_on_SubirVolumenSFX_pressed"]
+
+[editable path="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion"]
+[editable path="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion2"]
+[editable path="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion3"]
+[editable path="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion4"]
+[editable path="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion5"]
+[editable path="ContenedorTabulador/Inputs/ContenedorRampeo/ContenedorAccion6"]
