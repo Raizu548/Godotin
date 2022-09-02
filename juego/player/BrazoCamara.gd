@@ -16,6 +16,7 @@ func _ready() -> void:
 
 func _unhandled_input(evento: InputEvent) -> void:
 	if evento is InputEventMouseMotion:
+		print("entra2 ")
 		# Movimiento alrededor del eje X (arriba/abajo)
 		rotation_degrees.x += evento.relative.y * velocidad_mov_camara.y
 		rotation_degrees.x = clamp(rotation_degrees.x,rango_rotacion_camara_x.x, rango_rotacion_camara_x.y)

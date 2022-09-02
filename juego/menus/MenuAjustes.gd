@@ -104,6 +104,8 @@ func activar_buses() -> void:
 
 ## Señales internas
 func _on_BotonMenuPrincipal_pressed() -> void:
+	var guardar: GuardarCargar = GuardarCargar.new()
+	guardar.guardar_datos_configuracion()
 	get_tree().change_scene(menu_inicial)
 
 

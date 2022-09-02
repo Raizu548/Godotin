@@ -10,13 +10,17 @@ export(String, FILE, "*.tscn") var proximo_nivel = ""
 
 ## Metodos
 func _ready() -> void:
-	DatosJuego.nivel_actual = get_tree().current_scene.filename
-	DatosJuego.num_nivel_actual = numero_nivel
-	DatosJuego.nivel_proximo = proximo_nivel
 	Evento.connect("game_over", self, "game_over")
+	yield(get_tree().create_timer(4.0), "timeout")
 
 
 ## Metodos personalizados
+func actualizar_datos() -> void:
+	DatosJuego.nivel_actual = get_tree().current_scene.filename
+	DatosJuego.num_nivel_actual = numero_nivel
+	DatosJuego.nivel_proximo = proximo_nivel
+
+
 func game_over() -> void:
 	get_tree().change_scene(menu_game_over)
 
