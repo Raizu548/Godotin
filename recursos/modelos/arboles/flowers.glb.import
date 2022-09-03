@@ -12,7 +12,7 @@ dest_files=[ "res://.import/flowers.glb-593871b117cb4b92e268d1387d5fe1bf.scn" ]
 [params]
 
 nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_name="Flores"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

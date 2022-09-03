@@ -14,6 +14,7 @@ func _ready() -> void:
 	velocidad_mov_camara *= chequear_camara_invertida()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+
 func _unhandled_input(evento: InputEvent) -> void:
 	if evento is InputEventMouseMotion:
 		# Movimiento alrededor del eje X (arriba/abajo)

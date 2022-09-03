@@ -11,8 +11,8 @@ dest_files=[ "res://.import/blockCornerLarge.glb-88d7a54852b01d7d32dfa9ab1391ee7
 
 [params]
 
-nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_type="StaticBody"
+nodes/root_name="BloqueEsquinaLargo"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
