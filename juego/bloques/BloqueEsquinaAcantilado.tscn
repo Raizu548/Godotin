@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://recursos/modelos/bloques/blockCliffCorner.glb" type="PackedScene" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.435359, 0.841425, -0.56471, -0.343442, 0.769577, -0.531648, -0.500076, 0.25, -7.55787e-05, -0.591525, 0.841425, -0.50011, -0.500076, 1, -0.50011, 0.531531, 0.769577, 0.343324, -4.17829e-05, 0.25, 0.499959, -0.500076, 0, 0.499959, -0.633028, 0.769577, -0.416751, -0.500076, 1, 0.499959, 0.499993, 1, 0.499959, 0.56471, 0.841425, 0.435242, 0.499993, 0.841425, 0.591407, 0.416634, 0.769577, 0.633028, -0.416718, 0.769577, 0.633028, -0.500076, 0.841425, 0.591407, -0.591525, 0.841425, 0.499959, -0.633028, 0.769577, 0.4166 )
+
+[node name="BloqueEsquinaAcantilado" instance=ExtResource( 1 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="0"]
+shape = SubResource( 1 )
+
+[node name="blockCliffCorner" parent="tmpParent" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )

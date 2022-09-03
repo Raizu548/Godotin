@@ -23,7 +23,7 @@ __meta__ = {
 "_edit_vertical_guides_": [ 480.0 ]
 }
 menu_ajustes = "res://juego/menus/MenuAjustes.tscn"
-nivel_inicial = "res://juego/niveles/NivelTestPesado.tscn"
+nivel_inicial = "res://juego/niveles/NivelTest.tscn"
 pantalla_carga = "res://juego/menus/PantallaCarga.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]

@@ -64,5 +64,5 @@ func cargar_hilo(nivel: String) -> void:
 func carga_completa(recurso: Resource) -> void:
 	texto_completo.visible = true
 	hilo.wait_to_finish()
-	escena_precargada = recurso.get_instance()
+	escena_precargada = recurso.instance()
 	puede_iniciar = true

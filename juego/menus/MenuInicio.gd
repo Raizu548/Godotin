@@ -26,4 +26,5 @@ func _on_BotonOpciones_pressed() -> void:
 
 func _on_BotonNuevo_pressed() -> void:
 	DatosJuego.nivel_actual = nivel_inicial
+#	get_tree().change_scene(nivel_inicial)
 	get_tree().change_scene(pantalla_carga)
