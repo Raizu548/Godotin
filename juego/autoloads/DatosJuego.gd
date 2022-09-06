@@ -35,6 +35,7 @@ func generar_puntaje() -> int:
 
 func restar_vida() -> void:
 	vida -= 1
+	resetar_monedas()
 	if vida == 0:
 		print("0 vidas")
 		Evento.emit_signal("game_over")
@@ -49,3 +50,6 @@ func sumar_monedas():
 
 func actualizar_monedas_pasar_nivel() -> void:
 	monedas_pasar_nivel = moneda_oro
+
+func resetar_monedas() -> void:
+	moneda_oro = monedas_pasar_nivel

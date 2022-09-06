@@ -802,6 +802,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 8, -2.5 )
 [node name="BloqueTierra22" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 8, -4.5 )
 
+[node name="BloqueTierra151" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 8, -5.5 )
+
+[node name="BloqueTierra152" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 9, -5.5 )
+
 [node name="BloqueTierra23" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 9, -4.5 )
 
