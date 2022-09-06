@@ -48,8 +48,6 @@ func cargar_hilo(nivel: String) -> void:
 		barra_progreso.value = recurso_interactivo.get_stage()
 		resultado = recurso_interactivo.poll()
 		
-		print("El resultado fue: ", resultado)
-		
 		if resultado != OK:
 			if resultado == ERR_FILE_EOF:
 				recurso = recurso_interactivo.get_resource()

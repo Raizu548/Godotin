@@ -1,0 +1,128 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://juego/Estructuras/IslaFlotante.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Estructuras/IslaFlotante2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/bloques/Bloques armados/ColumnaBloques.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/bloques/Bloques armados/MuroLargo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/player/Godotin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
+[ext_resource path="res://juego/Estructuras/Portal/Portal.tscn" type="PackedScene" id=13]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.0823529, 0.254902, 0.239216, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1, 0.001, 1 )
+
+[node name="Nivel2" type="Node"]
+script = ExtResource( 12 )
+nivel_actual = "res://juego/niveles/NivelTest.tscn"
+menu_game_over = "res://juego/menus/MenuGameOver.tscn"
+proximo_nivel = "res://juego/niveles/NivelTest2.tscn"
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.816168, -0.0606786, -0.57462, 0.577815, 0.085709, 0.811655, 0, -0.994471, 0.105014, 0, 32.7113, 0 )
+light_color = Color( 0.901961, 0.972549, 0.0588235, 1 )
+light_energy = 1.94
+shadow_enabled = true
+
+[node name="Suelo" type="StaticBody" parent="."]
+transform = Transform( 50, 0, 0, 0, 1, 0, 0, 0, 50, 0, 0, 0 )
+collision_layer = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Suelo"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Suelo"]
+shape = SubResource( 3 )
+
+[node name="Plataformas" type="Spatial" parent="."]
+
+[node name="MurosExteriores" type="Spatial" parent="Plataformas"]
+
+[node name="Norte" type="Spatial" parent="Plataformas/MurosExteriores"]
+
+[node name="MuroLargo" parent="Plataformas/MurosExteriores/Norte" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -50 )
+
+[node name="MuroLargo2" parent="Plataformas/MurosExteriores/Norte" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -50 )
+
+[node name="ColumnaBloques" parent="Plataformas/MurosExteriores/Norte" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0, -50 )
+
+[node name="ColumnaBloques3" parent="Plataformas/MurosExteriores/Norte" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -50 )
+
+[node name="ColumnaBloques2" parent="Plataformas/MurosExteriores/Norte" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, -50 )
+
+[node name="Sur" type="Spatial" parent="Plataformas/MurosExteriores"]
+
+[node name="MuroLargo3" parent="Plataformas/MurosExteriores/Sur" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 50 )
+
+[node name="MuroLargo4" parent="Plataformas/MurosExteriores/Sur" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 50 )
+
+[node name="ColumnaBloques4" parent="Plataformas/MurosExteriores/Sur" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0, 50 )
+
+[node name="ColumnaBloques5" parent="Plataformas/MurosExteriores/Sur" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 50 )
+
+[node name="ColumnaBloques6" parent="Plataformas/MurosExteriores/Sur" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 50 )
+
+[node name="Este" type="Spatial" parent="Plataformas/MurosExteriores"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="MuroLargo7" parent="Plataformas/MurosExteriores/Este" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 50 )
+
+[node name="MuroLargo8" parent="Plataformas/MurosExteriores/Este" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 50 )
+
+[node name="ColumnaBloques" parent="Plataformas/MurosExteriores/Este" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0, 50 )
+
+[node name="Oeste" type="Spatial" parent="Plataformas/MurosExteriores"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="MuroLargo5" parent="Plataformas/MurosExteriores/Oeste" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -50 )
+
+[node name="MuroLargo6" parent="Plataformas/MurosExteriores/Oeste" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -50 )
+
+[node name="ColumnaBloques2" parent="Plataformas/MurosExteriores/Oeste" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0, -50 )
+
+[node name="IslaFlotante" parent="Plataformas" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -34 )
+
+[node name="IslaFlotante2" parent="Plataformas" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, -2, 14, 2 )
+
+[node name="Monedas" type="Spatial" parent="."]
+
+[node name="Sierras" type="Spatial" parent="."]
+
+[node name="Portal" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 6.07335, 0, 0 )
+
+[node name="HUD" parent="." instance=ExtResource( 11 )]
+
+[node name="Godotin" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 24, -37 )
+velocidad_max = Vector2( 5, 10 )
+impulso = 25.0

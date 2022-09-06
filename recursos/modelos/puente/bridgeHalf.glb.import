@@ -11,8 +11,8 @@ dest_files=[ "res://.import/bridgeHalf.glb-eb439960dfae6f7b9a3e6c43a317c9f6.scn"
 
 [params]
 
-nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_type="StaticBody"
+nodes/root_name="PuenteInicio"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

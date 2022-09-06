@@ -1,0 +1,414 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://juego/bloques/BloqueTierraRampa.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/bloques/BloqueTierra.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/bloques/Bloques armados/BolqueMuroMedio.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/bloques/BloqueLargo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/bloques/BloqueAcantilado.tscn" type="PackedScene" id=5]
+
+[node name="MontañaColumna" type="Spatial"]
+
+[node name="BolqueMuroMedio" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="BolqueMuroMedio3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.31134e-07, 0, 3 )
+
+[node name="BolqueMuroMedio4" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.31134e-07, 0, -3 )
+
+[node name="BolqueMuroMedio2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+
+[node name="BolqueMuroMedio5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+
+[node name="BolqueMuroMedio6" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.31134e-07, 2, 3 )
+
+[node name="BolqueMuroMedio7" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.31134e-07, 2, -3 )
+
+[node name="BolqueMuroMedio8" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0 )
+
+[node name="BolqueMuroMedio9" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 0 )
+
+[node name="BolqueMuroMedio10" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.31134e-07, 4, 3 )
+
+[node name="BolqueMuroMedio11" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.31134e-07, 4, -3 )
+
+[node name="BolqueMuroMedio12" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, 0 )
+
+[node name="BolqueMuroMedio13" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, 0 )
+
+[node name="BolqueMuroMedio14" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.74846e-07, 6, 4 )
+
+[node name="BolqueMuroMedio15" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.74846e-07, 6, -4 )
+
+[node name="BolqueMuroMedio16" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, 0 )
+
+[node name="BolqueMuroMedio17" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 8, 0 )
+
+[node name="BolqueMuroMedio18" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.74846e-07, 8, 4 )
+
+[node name="BolqueMuroMedio19" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.74846e-07, 8, -4 )
+
+[node name="BolqueMuroMedio20" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 8, 0 )
+
+[node name="BolqueMuroMedio21" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 10, 0 )
+
+[node name="BolqueMuroMedio22" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.18557e-07, 10, 5 )
+
+[node name="BolqueMuroMedio23" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.18557e-07, 10, -5 )
+
+[node name="BolqueMuroMedio24" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 10, 0 )
+
+[node name="BolqueMuroMedio25" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 12, -3 )
+
+[node name="BolqueMuroMedio31" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 12, 2 )
+
+[node name="BolqueMuroMedio26" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.38419e-07, 12, 5 )
+
+[node name="BolqueMuroMedio27" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 12, -6 )
+
+[node name="BolqueMuroMedio30" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 12, -6 )
+
+[node name="BolqueMuroMedio28" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 12, -2 )
+
+[node name="BolqueMuroMedio29" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 12, 3 )
+
+[node name="BloqueLargo" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 14, 4.5 )
+
+[node name="BloqueLargo8" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 14, 4.5 )
+
+[node name="BloqueLargo9" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 14, 4.5 )
+
+[node name="BloqueLargo10" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 14, 4.5 )
+
+[node name="BloqueLargo2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 14, 4.5 )
+
+[node name="BloqueLargo3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 14, 2.5 )
+
+[node name="BloqueLargo4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 14, 0.5 )
+
+[node name="BloqueLargo5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 14, -1.5 )
+
+[node name="BloqueLargo6" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 14, -3.5 )
+
+[node name="BloqueLargo7" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 14, -5.5 )
+
+[node name="BloqueLargo11" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 14, 2.5 )
+
+[node name="BloqueLargo12" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 14, 0.5 )
+
+[node name="BloqueLargo13" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 14, -1.5 )
+
+[node name="BloqueLargo14" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 14, -3.5 )
+
+[node name="BloqueLargo15" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 14, -5.5 )
+
+[node name="BloqueLargo16" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 14, 2.5 )
+
+[node name="BloqueLargo17" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 14, 0.5 )
+
+[node name="BloqueLargo18" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 14, -1.5 )
+
+[node name="BloqueLargo19" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 14, -3.5 )
+
+[node name="BloqueLargo20" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 14, -5.5 )
+
+[node name="BloqueLargo21" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 14, 2.5 )
+
+[node name="BloqueLargo22" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 14, 0.5 )
+
+[node name="BloqueLargo23" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 14, -1.5 )
+
+[node name="BloqueLargo24" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 14, -3.5 )
+
+[node name="BloqueLargo25" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 14, -5.5 )
+
+[node name="BloqueLargo26" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 14, 2.5 )
+
+[node name="BloqueLargo27" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 14, 0.5 )
+
+[node name="BloqueLargo28" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 14, -1.5 )
+
+[node name="BloqueLargo29" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 14, -3.5 )
+
+[node name="BloqueLargo30" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 14, -5.5 )
+
+[node name="BloqueTierra" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, 3 )
+
+[node name="BloqueTierra2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 7, 3 )
+
+[node name="BloqueTierra3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 8, 3 )
+
+[node name="BloqueTierra4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 9, 3 )
+
+[node name="BloqueTierra5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, 3 )
+
+[node name="BloqueTierra6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 11, 3 )
+
+[node name="BloqueTierra7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 11, 4 )
+
+[node name="BloqueTierra9" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 12, 4 )
+
+[node name="BloqueTierra10" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 13, 5 )
+
+[node name="BloqueTierra11" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 6, 3 )
+
+[node name="BloqueTierra12" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 7, 3 )
+
+[node name="BloqueTierra13" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 8, 3 )
+
+[node name="BloqueTierra14" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 9, 3 )
+
+[node name="BloqueTierra15" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 10, 3 )
+
+[node name="BloqueTierra16" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 10, 4 )
+
+[node name="BloqueTierra17" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 11, 4 )
+
+[node name="BloqueTierra18" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 12, 4 )
+
+[node name="BloqueTierra19" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 13, 5 )
+
+[node name="BloqueTierra20" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 13, 5 )
+
+[node name="BloqueTierra21" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 10, 3 )
+
+[node name="BloqueTierra22" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 11, 3 )
+
+[node name="BloqueTierra23" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 12, 4 )
+
+[node name="BloqueTierra24" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -3 )
+
+[node name="BloqueTierra25" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 7, -3 )
+
+[node name="BloqueTierra26" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 8, -3 )
+
+[node name="BloqueTierra27" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9, -3 )
+
+[node name="BloqueTierra28" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 10, -3 )
+
+[node name="BloqueTierra29" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 11, -3 )
+
+[node name="BloqueTierra30" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 11, -4 )
+
+[node name="BloqueTierra31" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 11, -4 )
+
+[node name="BloqueTierra32" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 10, -4 )
+
+[node name="BloqueTierra33" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 12, -5 )
+
+[node name="BloqueTierra34" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 12, -5 )
+
+[node name="BloqueTierra35" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 12, -5 )
+
+[node name="BloqueTierra36" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 13, -5 )
+
+[node name="BloqueTierra37" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 7, -3 )
+
+[node name="BloqueTierra39" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 8, -3 )
+
+[node name="BloqueTierra40" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 9, -3 )
+
+[node name="BloqueTierra41" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, -3 )
+
+[node name="BloqueTierra42" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, -4 )
+
+[node name="BloqueTierra43" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 11, -4 )
+
+[node name="BloqueTierra44" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 11, -3 )
+
+[node name="BloqueTierra45" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 12, -5 )
+
+[node name="BloqueTierra38" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -3 )
+
+[node name="BloqueTierra8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10, 4 )
+
+[node name="BloqueAcantilado" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, 5 )
+
+[node name="BloqueAcantilado2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, 4 )
+
+[node name="BloqueAcantilado3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, 3 )
+
+[node name="BloqueAcantilado4" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, 2 )
+
+[node name="BloqueAcantilado5" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, 1 )
+
+[node name="BloqueAcantilado6" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, 0 )
+
+[node name="BloqueAcantilado7" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, -1 )
+
+[node name="BloqueAcantilado8" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, -2 )
+
+[node name="BloqueAcantilado9" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, -3 )
+
+[node name="BloqueAcantilado10" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, -4 )
+
+[node name="BloqueAcantilado11" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, -5 )
+
+[node name="BloqueAcantilado12" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 14, -6 )
+
+[node name="BloqueAcantilado13" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, 5 )
+
+[node name="BloqueAcantilado14" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, 4 )
+
+[node name="BloqueAcantilado15" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, 3 )
+
+[node name="BloqueAcantilado16" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, 2 )
+
+[node name="BloqueAcantilado17" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, 1 )
+
+[node name="BloqueAcantilado18" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, -4.80825e-07 )
+
+[node name="BloqueAcantilado19" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, -1 )
+
+[node name="BloqueAcantilado20" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, -2 )
+
+[node name="BloqueAcantilado21" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, -3 )
+
+[node name="BloqueAcantilado22" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, -4 )
+
+[node name="BloqueAcantilado23" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, -5 )
+
+[node name="BloqueAcantilado24" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 14, -6 )
+
+[node name="BloqueTierraRampa" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 3.5, 9.5, -2 )
+
+[node name="BloqueTierraRampa2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 3.5, 9.5, -1 )
+
+[node name="BloqueTierraRampa3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 3.5, 9.5, 0 )
+
+[node name="BloqueTierraRampa4" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 3.5, 9.5, 1 )
+
+[node name="BloqueTierraRampa5" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 3.5, 9.5, 2 )

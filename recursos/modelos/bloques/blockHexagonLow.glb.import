@@ -12,7 +12,7 @@ dest_files=[ "res://.import/blockHexagonLow.glb-9ab6b4b8919c73d77321f3bafd59fe82
 [params]
 
 nodes/root_type="StaticBody"
-nodes/root_name="BloqueHexagono"
+nodes/root_name="BloqueHexagonoPequeno"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

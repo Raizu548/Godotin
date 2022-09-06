@@ -1,8 +1,139 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://recursos/modelos/danio/metal.material" type="Material" id=1]
 [ext_resource path="res://juego/objetos/danio/SierraCorto.wav" type="AudioStream" id=2]
 [ext_resource path="res://juego/objetos/danio/Sierra.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("SierraArea/tmpParent/saw:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SierraArea/AudioStreamPlayer3D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SierraArea:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SierraArea:translation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "activada"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SierraArea/tmpParent/saw:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 180 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SierraArea/AudioStreamPlayer3D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "activadaMovimiento"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SierraArea:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 180 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, -120 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SierraArea:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -3, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 3, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("SierraArea/AudioStreamPlayer3D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [  ],
+"times": PoolRealArray(  )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SierraArea/AudioStreamPlayer3D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
 
 [sub_resource type="CylinderShape" id=2]
 radius = 0.32597
@@ -23,82 +154,29 @@ surfaces/0 = {
 "vertex_count": 256
 }
 
-[sub_resource type="Animation" id=3]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("tmpParent/saw:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "activada"
-length = 0.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("tmpParent/saw:rotation_degrees")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 180 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-
-[node name="Sierra" type="Area"]
-collision_layer = 8
+[node name="Sierra" type="Spatial"]
 script = ExtResource( 3 )
-
-[node name="Colisionador" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-shape = SubResource( 2 )
-
-[node name="tmpParent" type="Spatial" parent="."]
-
-[node name="saw" type="MeshInstance" parent="tmpParent"]
-mesh = SubResource( 1 )
-material/0 = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "activada"
 anims/RESET = SubResource( 3 )
 anims/activada = SubResource( 4 )
+anims/activadaMovimiento = SubResource( 5 )
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="SierraArea" type="Area" parent="."]
+collision_layer = 8
+
+[node name="Colisionador" type="CollisionShape" parent="SierraArea"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="tmpParent" type="Spatial" parent="SierraArea"]
+
+[node name="saw" type="MeshInstance" parent="SierraArea/tmpParent"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="SierraArea"]
 stream = ExtResource( 2 )
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="SierraArea" to="." method="_on_SierraArea_body_entered"]
