@@ -1,0 +1,391 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://juego/entorno/Arbol.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Estructuras/Laberinto.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/objetos/danio/Sierra.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/bloques/Bloques armados/MuroLargo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/player/Godotin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
+[ext_resource path="res://juego/Estructuras/Portal/Portal.tscn" type="PackedScene" id=13]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.0823529, 0.254902, 0.239216, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1, 0.001, 1 )
+
+[node name="NivelBase" type="Node"]
+script = ExtResource( 12 )
+nivel_actual = "res://juego/niveles/NivelTest.tscn"
+menu_game_over = "res://juego/menus/MenuGameOver.tscn"
+proximo_nivel = "res://juego/niveles/NivelTest2.tscn"
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.816168, -0.0606786, -0.57462, 0.577815, 0.085709, 0.811655, 0, -0.994471, 0.105014, 0, 27.7113, 0 )
+light_color = Color( 0.901961, 0.972549, 0.0588235, 1 )
+light_energy = 1.94
+shadow_enabled = true
+
+[node name="Suelo" type="StaticBody" parent="."]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0 )
+collision_layer = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Suelo"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Suelo"]
+shape = SubResource( 3 )
+
+[node name="Plataformas" type="Spatial" parent="."]
+
+[node name="Laberinto" parent="Plataformas" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 41 )
+
+[node name="MurosExteriores" type="Spatial" parent="Plataformas"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MuroLargo5" parent="Plataformas/MurosExteriores" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 100 )
+
+[node name="MuroLargo7" parent="Plataformas/MurosExteriores" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34, 0, 89 )
+
+[node name="MuroLargo9" parent="Plataformas/MurosExteriores" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16, 0, 87 )
+
+[node name="Arbol" type="Spatial" parent="Plataformas"]
+
+[node name="Arbol" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 4.80359, 0, 80.1711 )
+
+[node name="Arbol2" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 6.71818, 0, 81.7455 )
+
+[node name="Arbol16" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 11.0739, 0, 82.5043 )
+
+[node name="Arbol17" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 16.5048, 0, 84.251 )
+
+[node name="Arbol18" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13.8245, 0, 87.4145 )
+
+[node name="Arbol19" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 21.4467, 0, 83.103 )
+
+[node name="Arbol20" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 25.935, 1.90735e-06, 87.8063 )
+
+[node name="Arbol21" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 15.3104, 1.90735e-06, 93.9723 )
+
+[node name="Arbol22" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 22.139, 1.90735e-06, 96.1196 )
+
+[node name="Arbol23" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 20.6367, 1.90735e-06, 90.2227 )
+
+[node name="Arbol12" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5.69509, 0, 75.7945 )
+
+[node name="Arbol13" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 6.18282, 0, 69.5903 )
+
+[node name="Arbol24" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.632719, 1.90735e-06, 4.49359 )
+
+[node name="Arbol28" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -11.0354, 1.90735e-06, -21.5086 )
+
+[node name="Arbol29" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -11.7829, 1.90735e-06, -30.9529 )
+
+[node name="Arbol30" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.217114, 1.90735e-06, -22.9529 )
+
+[node name="Arbol37" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.118836, 1.90735e-06, -13.6361 )
+
+[node name="Arbol38" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 66.9349, 1.90735e-06, -86.0533 )
+
+[node name="Arbol39" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 69.9349, 1.90735e-06, -86.0533 )
+
+[node name="Arbol40" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 72.9349, 1.90735e-06, -86.0533 )
+
+[node name="Arbol42" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 66.9349, 1.90735e-06, -79.0533 )
+
+[node name="Arbol43" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 69.9349, 1.90735e-06, -79.0533 )
+
+[node name="Arbol44" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 72.9349, 1.90735e-06, -79.0533 )
+
+[node name="Arbol41" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 75.9548, 1.90735e-06, -85.1536 )
+
+[node name="Arbol45" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 75.9548, 1.90735e-06, -79.8287 )
+
+[node name="Arbol36" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 8.21711, 1.90735e-06, -18.9529 )
+
+[node name="Arbol32" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -18.8076, 1.90735e-06, -15.5768 )
+
+[node name="Arbol33" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -21.1934, 1.90735e-06, -27.8007 )
+
+[node name="Arbol31" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 2.21711, 1.90735e-06, -31.9529 )
+
+[node name="Arbol34" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -6.90683, 1.90735e-06, -39.3253 )
+
+[node name="Arbol35" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1.52689, 1.90735e-06, -39.4808 )
+
+[node name="Arbol25" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.78262, 1.90735e-06, 3.95242 )
+
+[node name="Arbol26" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -11.5515, 1.90735e-06, 13.8907 )
+
+[node name="Arbol46" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -41.2045, 1.90735e-06, 18.49 )
+
+[node name="Arbol47" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -42.9595, 1.90735e-06, 5.26493 )
+
+[node name="Arbol48" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -47.0831, 9.53674e-07, 4.92165 )
+
+[node name="Arbol49" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -53.2479, 1.90735e-06, 13.0878 )
+
+[node name="Arbol27" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 2.56899, 1.90735e-06, 13.378 )
+
+[node name="Arbol14" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 8.57438, 0, 78.6569 )
+
+[node name="Arbol15" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13.0621, 0, 80.2315 )
+
+[node name="Arbol3" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -3.66964, 1.90735e-06, 79.5337 )
+
+[node name="Arbol4" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -5.99046, 1.90735e-06, 81.4094 )
+
+[node name="Arbol5" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -10.3576, 1.90735e-06, 79.6712 )
+
+[node name="Arbol6" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -11.4264, 1.90735e-06, 82.9848 )
+
+[node name="Arbol7" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -12.8662, 1.90735e-06, 75.793 )
+
+[node name="Arbol8" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -6.74476, 1.90735e-06, 74.3753 )
+
+[node name="Arbol9" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -8.16577, 1.90735e-06, 76.8239 )
+
+[node name="Arbol10" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -11.4321, 1.90735e-06, 71.5656 )
+
+[node name="Arbol11" parent="Plataformas/Arbol" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -7.75501, 1.90735e-06, 68.9215 )
+
+[node name="Godotin" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.113795, 94 )
+velocidad_max = Vector2( 5, 10 )
+impulso = 25.0
+
+[node name="Monedas" type="Spatial" parent="."]
+
+[node name="Sierras" type="Spatial" parent="."]
+
+[node name="SierrasMoviles" type="Spatial" parent="."]
+
+[node name="Sierra" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0711895, 78.347 )
+animacion = "activadaMovimiento"
+
+[node name="Sierra2" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.45888, 0.0711895, 57.5373 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra5" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9557, 0.0711895, 40.5531 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra6" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9557, 0.0711895, 37.0767 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra9" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7072, 0.0711895, 15.0767 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra10" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6403, 0.0711895, 15.0767 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra19" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.84739, 0.0711895, -10.8824 )
+animacion = "activadaMovimiento"
+frame_inicio = 1.2
+
+[node name="Sierra20" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.84739, 0.0711895, -11.8824 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.2
+
+[node name="Sierra21" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.07962, 0.0711895, -43.3759 )
+animacion = "activadaMovimiento"
+
+[node name="Sierra22" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.4191, 0.071189, -24.9615 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.1
+
+[node name="Sierra23" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.6967, 0.0711881, -21.034 )
+animacion = "activadaMovimiento"
+frame_inicio = 1.0
+
+[node name="Sierra24" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17.7004, 0.0711881, -26.5606 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.1
+
+[node name="Sierra25" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -39.228, 0.0711881, 2.24568 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.1
+
+[node name="Sierra26" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -49.9466, 0.0711881, 2.24568 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.1
+
+[node name="Sierra29" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -77.175, 0.0711881, -10.8358 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.1
+
+[node name="Sierra30" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -77.175, 0.0711881, -45.8358 )
+animacion = "activadaMovimiento"
+
+[node name="Sierra31" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -75.0978, 0.0711881, -48.3458 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra33" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -64.9877, 0.0711881, -51.7712 )
+animacion = "activadaMovimiento"
+
+[node name="Sierra32" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -75.1668, 0.0711881, -45.9916 )
+animacion = "activadaMovimiento"
+frame_inicio = 1.4
+
+[node name="Sierra27" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -44.1327, 0.0711881, 20.5006 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.1
+
+[node name="Sierra28" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -53.7102, 0.0711881, 20.5006 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.1
+
+[node name="Sierra11" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57118, -0.451506, 0.523743 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra7" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.30488, 0.0711895, 38.8743 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra8" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.84544, 0.0711895, 38.8743 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra12" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2319, 0.0711895, 30.5531 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra13" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2319, 0.0711895, 27.0767 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra14" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.8828, 0.0711895, 28.8743 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra15" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.3422, 0.0711895, 28.8743 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra4" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.6454, 0.0711895, 54.9966 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra16" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6059, 0.0711895, 44.9465 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra17" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6591, 0.0711895, 28.9465 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra18" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.2937, 0.0711895, 28.9465 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Sierra3" parent="SierrasMoviles" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.4747, 0.0711895, 59.9164 )
+animacion = "activadaMovimiento"
+frame_inicio = 0.5
+
+[node name="Portal" parent="." instance=ExtResource( 13 )]
+transform = Transform( -6.99382e-08, 0, -1.6, 0, 1.6, 0, 1.6, 0, -6.99382e-08, 76.1335, 9.53674e-07, -82.381 )
+
+[node name="HUD" parent="." instance=ExtResource( 11 )]
