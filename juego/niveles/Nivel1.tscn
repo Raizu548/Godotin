@@ -716,22 +716,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19534, 5, 18.227 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.69534, 5, 18.227 )
 
 [node name="Pinchos18" parent="Pinchos" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18381, 2.5, 17.5746 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18381, 2, 17.5746 )
 
 [node name="Pinchos19" parent="Pinchos" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.68381, 2.5, 17.5746 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.68381, 2, 17.5746 )
 
 [node name="Pinchos20" parent="Pinchos" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.18381, 2.5, 17.5746 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.18381, 2, 17.5746 )
 
 [node name="Pinchos21" parent="Pinchos" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68381, 2.5, 17.5746 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68381, 2, 17.5746 )
 
 [node name="Pinchos22" parent="Pinchos" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.18381, 2.5, 17.5746 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.18381, 2, 17.5746 )
 
 [node name="Pinchos23" parent="Pinchos" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.68381, 2.5, 17.5746 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.68381, 2, 17.5746 )
 
 [node name="Pinchos11" parent="Pinchos" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.69534, 5, 18.727 )
@@ -755,7 +755,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51409, 7, 13.727 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.514088, 8, 15.727 )
 
 [node name="Godotin" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.31848, 0.126537, -39.0859 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.711, 15.1265, 28.0583 )
 velocidad_max = Vector2( 5, 10 )
 impulso = 25.0
 

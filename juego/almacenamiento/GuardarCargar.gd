@@ -5,6 +5,7 @@ enum {JUEGO, CONFIG}
 
 
 ## Guardar datos
+## Guardado con archivos JSON
 func guardar_datos_json(datos_a_guardar: Dictionary) -> int:
 	if not OS.get_name() in DatosConfiguracion.OS_ADMITIDOS_GUARDADOS:
 		return -1
@@ -18,7 +19,7 @@ func guardar_datos_json(datos_a_guardar: Dictionary) -> int:
 	
 	return resultado
 
-
+## Guardados con archivos TRES
 func guardar_datos_tres(datos_a_guardar: Dictionary) -> int:
 	if not OS.get_name() in DatosConfiguracion.OS_ADMITIDOS_GUARDADOS:
 		return -1
@@ -49,6 +50,25 @@ func guardar_datos_configuracion() -> int:
 	var resultado: int = ResourceSaver.save(ruta,datos)
 	return resultado
 	
+
+## Guardado de partida
+func guardar_datos_juego() -> int:
+	if not OS.get_name() in DatosConfiguracion.OS_ADMITIDOS_GUARDADOS:
+		return -1
+	
+	var ruta: String = seleccionar_ruta(".tres",JUEGO)
+	
+	var datos: DatosJuegoGuardado = DatosJuegoGuardado.new()
+	
+	datos.vida = DatosJuego.vida
+	datos.moneda_oro = DatosJuego.moneda_oro
+	datos.nivel_actual = DatosJuego.nivel_actual
+	datos.num_nivel_actual = DatosJuego.num_nivel_actual
+	datos.nivel_proximo = DatosJuego.nivel_proximo
+	
+	var resultado: int = ResourceSaver.save(ruta,datos)
+	
+	return resultado
 
 
 func seleccionar_ruta(tipo_extension: String, archivo: int) -> String:
@@ -121,6 +141,17 @@ func cargar_datos_configuracion() -> void:
 		
 		var tamanio_pantalla := OS.get_screen_size()
 		OS.set_window_position((tamanio_pantalla - datos.pantalla_resolucion) * 0.5)
+
+
+func cargar_datos_juego() -> void:
+	var ruta: String = seleccionar_ruta(".tres", JUEGO)
+	var datos: Resource = load(ruta)
+	
+	DatosJuego.vida = datos.vida
+	DatosJuego.moneda_oro = datos.moneda_oro
+	DatosJuego.nivel_actual = datos.nivel_actual
+	DatosJuego.num_nivel_actual = datos.num_nivel_actual
+	DatosJuego.nivel_proximo = datos.nivel_proximo
 
 
 ## Borrar datos

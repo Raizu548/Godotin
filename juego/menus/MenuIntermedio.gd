@@ -1,5 +1,8 @@
 extends Control
 
+export(String, FILE, "*.tscn") var pantalla_carga
+
+
 # Varibales onready
 onready var titulo: Label = $Titulo
 onready var puntos: Label = $Puntos
@@ -10,6 +13,7 @@ func _ready() -> void:
 	puntos.text = "{puntos}\nPuntos Totales".format({"puntos":DatosJuego.generar_puntaje()})
 	
 
-
 func _on_BotonNivel_pressed() -> void:
-	get_tree().change_scene(DatosJuego.nivel_proximo)
+	# DatosJuego.nivel_actual = DatosJuego.nivel_proximo
+	DatosJuego.nivel_actual = DatosJuego.nivel_proximo
+	get_tree().change_scene(pantalla_carga)
