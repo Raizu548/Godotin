@@ -31,7 +31,7 @@ script = ExtResource( 12 )
 nivel_actual = "res://juego/niveles/Nivel2.tscn"
 menu_game_over = "res://juego/menus/MenuGameOver.tscn"
 numero_nivel = 2
-proximo_nivel = "res://juego/niveles/NivelTest2.tscn"
+proximo_nivel = "res://juego/niveles/Nivel3.tscn"
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.999553, -0.00314102, -0.0297451, 0.0299099, 0.0986817, 0.994669, -0.000188976, -0.995114, 0.0987315, 0, 39.5075, 0 )
