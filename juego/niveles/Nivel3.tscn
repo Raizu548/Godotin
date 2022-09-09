@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://juego/entorno/Arbol.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Estructuras/Laberinto.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://juego/bloques/Bloques armados/MuroLargo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/items/MonedaOro.tscn" type="PackedScene" id=5]
 [ext_resource path="res://juego/player/Godotin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://juego/menus/MenuPausa.tscn" type="PackedScene" id=7]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
 [ext_resource path="res://juego/Estructuras/Portal/Portal.tscn" type="PackedScene" id=13]
@@ -25,6 +26,12 @@ nivel_actual = "res://juego/niveles/Nivel3.tscn"
 menu_game_over = "res://juego/menus/MenuGameOver.tscn"
 numero_nivel = 3
 proximo_nivel = "res://juego/menus/MenuFinJuego.tscn"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( 11 )]
+
+[node name="MenuPausa" parent="CanvasLayer" instance=ExtResource( 7 )]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.816168, -0.0606786, -0.57462, 0.577815, 0.085709, 0.811655, 0, -0.994471, 0.105014, 0, 27.7113, 0 )
@@ -1237,5 +1244,3 @@ frame_inicio = 0.5
 [node name="Portal" parent="." instance=ExtResource( 13 )]
 transform = Transform( -6.99382e-08, 0, -1.6, 0, 1.6, 0, 1.6, 0, -6.99382e-08, 76.1335, 9.53674e-07, -82.381 )
 proximo_nivel = "res://juego/menus/MenuFinJuego.tscn"
-
-[node name="HUD" parent="." instance=ExtResource( 11 )]
