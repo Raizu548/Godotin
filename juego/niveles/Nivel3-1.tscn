@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://juego/niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Estructuras/Laberinto.tscn" type="PackedScene" id=2]
+
+[node name="Nivel3" instance=ExtResource( 1 )]
+
+[node name="Suelo" parent="." index="1"]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0 )
+
+[node name="Laberinto" parent="Plataformas" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 41 )
+
+[node name="Godotin" parent="." index="3"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.113795, -38 )
+
+[node name="Portal" parent="." index="6"]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 6.07335, 0, -41.7423 )

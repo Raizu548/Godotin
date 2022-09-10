@@ -26,8 +26,8 @@ func _unhandled_input(evento: InputEvent) -> void:
 		rotation_degrees.y = wrapf(rotation_degrees.y, rango_rotacion_camara_y.x, rango_rotacion_camara_y.y)
 	
 	# Solo debug
-	if Input.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+	#if Input.is_action_pressed("ui_cancel"):
+	#	get_tree().quit()
 
 
 ## Metodos personalizados

@@ -23,7 +23,7 @@ __meta__ = {
 "_edit_vertical_guides_": [ 480.0 ]
 }
 menu_ajustes = "res://juego/menus/MenuAjustes.tscn"
-nivel_inicial = "res://juego/niveles/NivelTest.tscn"
+nivel_inicial = "res://juego/niveles/Nivel1.tscn"
 pantalla_carga = "res://juego/menus/PantallaCarga.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -47,7 +47,6 @@ margin_top = 215.0
 margin_right = 576.0
 margin_bottom = 275.0
 custom_fonts/font = SubResource( 3 )
-disabled = true
 text = "Cargar"
 
 [node name="BotonNuevo" type="Button" parent="."]
@@ -77,6 +76,7 @@ text = "Salir"
 [node name="BotonSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[connection signal="pressed" from="BotonCargar" to="." method="_on_BotonCargar_pressed"]
 [connection signal="pressed" from="BotonNuevo" to="." method="_on_BotonNuevo_pressed"]
 [connection signal="pressed" from="BotonOpciones" to="." method="_on_BotonOpciones_pressed"]
 [connection signal="pressed" from="BotonSalir" to="." method="_on_BotonSalir_pressed"]

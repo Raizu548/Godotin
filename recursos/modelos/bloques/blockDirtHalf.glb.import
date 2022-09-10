@@ -11,8 +11,8 @@ dest_files=[ "res://.import/blockDirtHalf.glb-12c9e612025f6ce2562a062838068786.s
 
 [params]
 
-nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_type="StaticBody"
+nodes/root_name="BloqueTierraMedio"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

@@ -11,8 +11,8 @@ dest_files=[ "res://.import/bridgeRamp.glb-79234f058f9a8495df9765c2442f9e0a.scn"
 
 [params]
 
-nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_type="StaticBody"
+nodes/root_name="PuenteRampa"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

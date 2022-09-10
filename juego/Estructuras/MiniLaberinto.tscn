@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://juego/bloques/BolqueMuroMedio.tscn" type="PackedScene" id=1]
-[ext_resource path="res://juego/bloques/PlataformaMediaCuadrada.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/bloques/Bloques armados/BolqueMuroMedio.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/bloques/Bloques armados/PlataformaMediaCuadrada.tscn" type="PackedScene" id=2]
+
 
 [node name="MiniLaberinto" type="Spatial"]
 

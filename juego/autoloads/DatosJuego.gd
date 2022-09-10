@@ -3,6 +3,7 @@ extends Node
 ## Atributos
 var vida: int = 3
 var moneda_oro: int = 0
+var monedas_pasar_nivel: int = 0
 var nivel_actual: String = ""
 var num_nivel_actual: int = 0
 var nivel_proximo: String = ""
@@ -24,7 +25,7 @@ func set_nivel_actual(nuevo_nivel: String) -> void:
 ## Metodos Personalizados
 func reset() -> void:
 	vida = 3
-	moneda_oro = 0
+	moneda_oro = monedas_pasar_nivel
 	puntaje = 0
 
 func generar_puntaje() -> int:
@@ -34,8 +35,8 @@ func generar_puntaje() -> int:
 
 func restar_vida() -> void:
 	vida -= 1
+	resetar_monedas()
 	if vida == 0:
-		print("0 vidas")
 		Evento.emit_signal("game_over")
 	else:
 		get_tree().reload_current_scene()
@@ -45,3 +46,9 @@ func restar_vida() -> void:
 func sumar_monedas():
 	moneda_oro += 1
 	Evento.emit_signal("actualizar_hud")
+
+func actualizar_monedas_pasar_nivel() -> void:
+	monedas_pasar_nivel = moneda_oro
+
+func resetar_monedas() -> void:
+	moneda_oro = monedas_pasar_nivel

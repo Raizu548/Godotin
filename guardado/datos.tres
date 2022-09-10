@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://juego/almacenamiento/DatosJuegoGuardado.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+nombre = ""
+vida = 3
+moneda_oro = 0
+nivel_actual = ""
+num_nivel_actual = 0
+nivel_proximo = ""

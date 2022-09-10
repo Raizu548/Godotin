@@ -11,8 +11,8 @@ dest_files=[ "res://.import/blockDirtRamp.glb-807e9b5dff0a210c185c64ad359ecd4e.s
 
 [params]
 
-nodes/root_type="Spatial"
-nodes/root_name="Scene Root"
+nodes/root_type="StaticBody"
+nodes/root_name="BloqueTierraRampa"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://juego/bloques/ColumnaBloques.tscn" type="PackedScene" id=3]
-[ext_resource path="res://juego/bloques/MuroLargo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/bloques/Bloques armados/ColumnaBloques.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/bloques/Bloques armados/MuroLargo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/player/Godotin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
@@ -107,6 +107,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0, -50 )
 
 [node name="Godotin" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.113795, 0 )
+velocidad_max = Vector2( 5, 10 )
+impulso = 25.0
 
 [node name="Monedas" type="Spatial" parent="."]
 

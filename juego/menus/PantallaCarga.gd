@@ -1,5 +1,5 @@
+class_name PantallaCargar
 extends Control
-
 
 
 func _on_Timer_timeout() -> void:

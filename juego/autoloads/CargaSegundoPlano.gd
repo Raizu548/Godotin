@@ -24,7 +24,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		texto_completo.visible = false
 		puede_iniciar = false
 		# Opcional 
-		queue_free()
+		#queue_free()
 
 ## Metodos personalizado
 func cargar_nivel(nivel: String) -> void:
@@ -38,17 +38,13 @@ func cargar_hilo(nivel: String) -> void:
 	var recurso_interactivo: ResourceInteractiveLoader = ResourceLoader.load_interactive(nivel)
 	var total_partes: int = recurso_interactivo.get_stage_count()
 	barra_progreso.max_value = total_partes
-	
 	print(barra_progreso.max_value)
 	
 	var resultado: int = OK
 	var recurso: Resource = null
-	
 	while resultado == OK:
 		barra_progreso.value = recurso_interactivo.get_stage()
 		resultado = recurso_interactivo.poll()
-		
-		print("El resultado fue: ", resultado)
 		
 		if resultado != OK:
 			if resultado == ERR_FILE_EOF:

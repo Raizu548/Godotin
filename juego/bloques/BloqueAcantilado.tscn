@@ -34,6 +34,7 @@ surfaces/1 = {
 }
 
 [node name="BloqueAcantilado" type="StaticBody"]
+collision_layer = 2
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )

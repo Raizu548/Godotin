@@ -1654,7 +1654,7 @@ nodes/TransicionSueloAire/position = Vector2( -20, 140 )
 nodes/VelCorrer/node = SubResource( 27 )
 nodes/VelCorrer/position = Vector2( -540, 120 )
 nodes/output/position = Vector2( 600, 180 )
-node_connections = [ "output", 0, "MezclaDisparar", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCorrer", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "VelCorrer", 0, "Animation 2", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer" ]
+node_connections = [ "output", 0, "MezclaDisparar", "TransicionSueloAire", 0, "MezclaIdleCaminar", "TransicionSueloAire", 1, "MezclaSaltarCaer", "VelCorrer", 0, "Animation 2", "MezclaIdleCaminar", 0, "Animation", "MezclaIdleCaminar", 1, "VelCorrer", "MezclaSaltarCaer", 0, "Animation 3", "MezclaSaltarCaer", 1, "Animation 4", "MezclaDisparar", 0, "TransicionSueloAire", "MezclaDisparar", 1, "Animation 5" ]
 
 [node name="Godotin" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
@@ -1841,13 +1841,13 @@ script = ExtResource( 3 )
 [node name="BrazoCamara" type="SpringArm" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.262151, 0 )
 collision_mask = 4
-spring_length = 12.0
+spring_length = 10.0
 script = ExtResource( 1 )
 rango_rotacion_camara_x = Vector2( -45, -15 )
 camara_y_intertida = true
 
 [node name="CameraPlayer" type="Camera" parent="BrazoCamara"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.665278, 0 )
 current = true
 
 [node name="Linterna" type="SpotLight" parent="."]
