@@ -28,7 +28,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 ## Metodos personalizado
 func cargar_nivel(nivel: String) -> void:
-	print("Cargar nivel")
 	hilo = Thread.new()
 	hilo.start(self, "cargar_hilo", nivel, 2)
 	raise()
@@ -36,16 +35,13 @@ func cargar_nivel(nivel: String) -> void:
 
 
 func cargar_hilo(nivel: String) -> void:
-	print("Cargar hilo inicio")
 	var recurso_interactivo: ResourceInteractiveLoader = ResourceLoader.load_interactive(nivel)
-	print("recurso interactivo")
 	var total_partes: int = recurso_interactivo.get_stage_count()
 	barra_progreso.max_value = total_partes
 	print(barra_progreso.max_value)
 	
 	var resultado: int = OK
 	var recurso: Resource = null
-	print("entronda al while")
 	while resultado == OK:
 		barra_progreso.value = recurso_interactivo.get_stage()
 		resultado = recurso_interactivo.poll()
@@ -58,12 +54,10 @@ func cargar_hilo(nivel: String) -> void:
 				printerr("Hubo un error en la carga del recurso")
 	
 	## Lo llama cuando termina de procesar con el hilo
-	print("salio del while")
 	call_deferred("carga_completa",recurso)
 
 
 func carga_completa(recurso: Resource) -> void:
-	print("carga completada")
 	texto_completo.visible = true
 	hilo.wait_to_finish()
 	escena_precargada = recurso.instance()

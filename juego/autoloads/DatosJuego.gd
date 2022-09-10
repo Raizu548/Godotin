@@ -37,7 +37,6 @@ func restar_vida() -> void:
 	vida -= 1
 	resetar_monedas()
 	if vida == 0:
-		print("0 vidas")
 		Evento.emit_signal("game_over")
 	else:
 		get_tree().reload_current_scene()

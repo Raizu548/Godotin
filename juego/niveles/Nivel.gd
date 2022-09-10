@@ -12,10 +12,8 @@ var guardar: GuardarCargar = GuardarCargar.new()
 ## Metodos
 func _ready() -> void:
 	guardar.guardar_datos_juego()
-	print("se guardo")
 	Evento.connect("game_over", self, "game_over")
 	yield(get_tree().create_timer(4.0), "timeout")
-	print("despues del yield")
 	actualizar_datos()
 
 
